@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block main %}
+  <div class="columns large-12 content-row">
+    <div class="row title">
+      <div class="columns large-12 content-title-inner">
+        <div class="row">
+          <div class="columns large-12">
+            <h1 class="page-title">Продукция</h1>
+            <h2 class="content-title">Завод ОЗНА зарекомендовал себя как производитель качественного электрооборудования отвечающего всем национальным и международным нормам, что подтверждается сертификатом ISO 9001:2015.<br> Продукция завода неизменно пользуется спросом в Омске, Красноярске, Тюмени, Барнауле, Иркутске и Казахстане.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row content about">
+      <div class="columns large-12 content-inner">
+        <div class="row  gallery-block">
+          <div class="columns small-12">
+            <div class="thumbnail-block">
+                <ul class="large-block-grid-3">
+              <li>
+                <div class="img-wrapper"><a href="/product/1"><img src="{% static "images/ktp.jpg" %}" alt="" class="about-image"></a></div>
+                <h4 class="employer-name" ><a href="/product/1">ПРОИЗВОДСТВО ПОДСТАНЦИЙ</a></h4>
+                <p>Производство комплектных трансформаторных подстанций любой сложности (КТП, КТПНУ, 2БКТП, КСО, ЩО-70) по однолинейным схемам заказчика.</p>
+              </li>
+              <li>
+                <div class="img-wrapper"><a href="{% url "sip" %}"><img src="{% static "images/armatura.jpg" %}" alt="" class="about-image"></a></div>
+                <h4 class="employer-name"><a href="{% url "sip" %}">ПРОИЗВОДСТВО АРМАТУРЫ СИП</a></h4>
+                <p>Производство анкерных, поддерживающих и соединительных зажимов СИП, производство крюков и кронштейнов и прочих аксессуаров СИП.</p>
+              </li>
+              <li>
+                <div class="img-wrapper"><a href="{% url "met" %}"><img src="{% static "images/met.jpg" %}" alt="" class="about-image"></a></div>
+                <h4 class="employer-name"><a href="{% url "met" %}">МЕТАЛЛОКОНСТРУКЦИИ ЛЭП </a></h4>
+                <p>Производство траверс ЛЭП, опор освещения, кронштейнов для светильников.</p>
+              </li>
+            </ul>
+            </div>
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns large-12">
+            <div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  {% endblock %}

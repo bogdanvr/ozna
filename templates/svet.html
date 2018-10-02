@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block main %}
+  <div class="columns large-12 content-row">
+    <div class="row title">
+      <div class="columns large-12 content-title-inner">
+        <div class="row">
+          <div class="columns large-12">
+            <h2 class="page-title">Производство светильников и ламп</h2>
+            <h2 class="content-title">Производство светильников для промышленных и общественных зданий, светодиодных и люминесцентных ламп.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row content about">
+      <div class="columns large-12 content-inner">
+        <div class="row  gallery-block">
+          <div class="columns small-12">
+            <div class="thumbnail-block">
+               
+            </div>
+            <div class="thumbnail-block product">
+            	
+              <ul class="large-block-grid-3 block-grid four-up">
+
+                  <li><a class="thumbnail" href="{% static "images/GS1x36.jpg" %}"rel="box"  title="  GS 1х36W"><span>Светильник GS 1х36W</span><img src="{% static "images/GS1x36.jpg" %}" alt=""></a></li>
+                  <li><a class="colorbox" href="{% static "images/GS2x18.png" %}"rel="box" title="  GS 2х18W"><span>Светильник GS 2х18W</span><img src="{% static "images/GS2x18.png" %}" alt=""></a></li>
+                  <li><a class="thumbnail" href="{% static "images/GS2x36.jpg" %}"rel="box" title="  GS 2х36W"><span>Светильник GS 2х36W</span><img src="{% static "images/GS2x36.jpg" %}" alt=""></a></li>
+                  
+
+
+                  
+              </ul>
+              <br/><br/>
+              <ul class="large-block-grid-3 block-grid four-up">
+
+                  
+                  <li><a class="thumbnail" href="{% url "lumlamp" %}" title="  GS 2х36W"><span>Люминесцентные лампы</span><img src="{% static "images/lampT8G13.png" %}" alt=""></a></li>
+                  <li><a class="thumbnail" href="{% url "ledlamp" %}" title="  GS 2х36W"><span>Светодиодные лампы</span><img src="{% static "images/lampT8G13led.png" %}" alt=""></a></li>
+
+
+                  
+              </ul>
+            
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns large-12">
+            <div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <div class="row testimonial">
+          <div class="columns large-3"> <img src="images/mantest.jpg" alt="" class="test-img"> </div>
+          <div class="columns large-12">
+				<div class="thumbnail-block">
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}

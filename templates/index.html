@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block main %}
+  <div class="columns large-12">
+    <div class="row flexslider-row">
+      <div class="columns large-12 flexslider-inner">
+        <div class="row">
+          <div class="columns large-5 sl">
+            <ul class="slides">
+              <li> <img src="{% static "images/slide5.jpg" %}" alt=""/> </li>
+              <li> <img src="{% static "images/slide4.jpg" %}" alt=""/> </li>
+               <li> <img src="{% static "images/slide3.jpg" %}" alt=""/> </li>
+               <li> <img src="{% static "images/slide.jpg" %}" alt=""/> </li>
+             
+              
+            </ul>
+          </div>
+          
+          <div class="columns large-7 sl-title">
+          		                <h2 class="one-title">ОЗНА</h2>
+            <h4 class="sub-title">Омский завод низковольтной арматуры <br> 25 лет на рынке</h4>
+			<h5 class="sub2-title">Производство подстанций<br> Производство арматуры СИП<br>Производство металлоконструкций для ЛЭП<br>Электротехническая лаборатория</h5>
+          </div>
+          
+      </div>
+    </div>
+       <div class="row content about">
+      <div class="columns large-12 content-inner2">
+        <div class="row  gallery-block">
+          <div class="columns small-12">
+            <div class="thumbnail-block">
+                <ul class="large-block-grid-3">
+              <li>
+                <div class="img-wrapper"><a href="/product/1"><img src="{% static "images/ktp.jpg" %}" alt="" class="about-image"></a></div>
+                <h4 class="employer-name" ><a href="/product/1">ПРОИЗВОДСТВО ПОДСТАНЦИЙ</a></h4>
+                <p>Производство комплетных трансформаторных подстанций любой сложности (КТП, КТПНУ, 2БКТП, КСО, ЩО-70) по однолинейным схемам заказчика.</p>
+              </li>
+              <li>
+                <div class="img-wrapper"><a href="/product/2"><img src="{% static "images/armatura.jpg" %}" alt="" class="about-image"></a></div>
+                <h4 class="employer-name"><a href="/product/2">ПРОИЗВОДСТВО АРМАТУРЫ СИП</a></h4>
+                <p>Производство анкерных, поддерживающих и соединительных зажимов СИП. Производство крюков, кронштейнов и прочих аксессуаров СИП.</p>
+              </li>
+              <li>
+                <div class="img-wrapper"><a href="/product/3"><img src="{% static "images/met.jpg" %}" alt="" class="about-image"></a></div>
+                <h4 class="employer-name"><a href="/product/3">МЕТАЛЛОКОНСТРУКЦИИ ЛЭП </a></h4>
+                <p>Производство траверс ЛЭП, опор освещения, кронштейнов для светильников.</p>
+              </li>
+            </ul>
+            </div>
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns large-12">
+            <div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row service-box-row">
+      <div class="columns large-12 service-box-inner">
+        <div class="row">
+          <div class="columns large-12 service-img pr20">
+            <h3 class="title">Услуги ОЗНА</h3>
+            <p>Лицензированная лаборатория, выполняет услуги по определению мест повреждения и ремонту кабельных линий по 10 и 0.4 Квт.<br> 
+              Испытательная электролаборатория зарегистрированная в Омском отделе по надзору за энергосетями и энергосустановками Федеральной службы по технологическому надзору с правом выполнения испытаний и измерений электрооборудования и электроустановок напряжением по 10 и 0.4 Квт  </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns large-12 feature-img pr20"> <a href="#">
+            <h4>Испытательная лаборатория</h4>
+            
+            </a>
+            <ul class="bullet service-benefits-list">
+              <li>Визуальный осмотр</li>
+              <li>Испытание силовых трансформаторов</li>
+              <li>Испытателей разъединителей, отделителей, короткозамыкателей до 10 кВ</li>
+              <li>Испытание сборных и соединительных шин</li>
+              <li>Испытание вентильных разрядников и ограничителей перенапряжения</li>
+              <li>Испытание вводов и проходных изоляторов</li>
+              <li>Испытание подвесных и опорных изоляторов</li>
+              <li>Испытание кабельных линий</li>
+              <li>Испытание трансформаторного масла</li>
+              <li>Испытание цепи фаза-нуль в электроустановках до 1 кВ</li>
+              <li>Проверка действия независимых расцепителей</li>
+              <li>Проверка УЗО</li>
+              <li>Измерение сопротивления заземления</li>
+              <li>Испытание повышенным напряжением силовых и осветительных электропроводок цепей до 1000 В.</li>
+            </ul>
+           <!--  <a class="button callToAction">Заказать услугу</a> </div> -->
+          
+    </div>
+  </div>
+ 
+  {% endblock %}

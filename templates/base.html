@@ -1,0 +1,167 @@
+{% load staticfiles %}
+{% load tags %}
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+<title>ОЗНА</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/foundation.min.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/superfish.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/stylesheet.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/flexslider.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'js/colorbox/colorbox.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'js/slider/flexslider.css' %}" />
+
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+<script src="js/vendor/custom.modernizr.js"></script>
+
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="css/ie-fixes.css">
+<![endif]-->
+</head>
+<body>
+<div class="row outterWrapper">
+  <div class="columns large-12">
+    <div class="row header-row">
+      <div class="columns logo-inner large-3"> <a href="{% url "main" %}"><img src="{% static "images/logo2.jpg" %}" alt=""/></a> </div>
+      <div class="columns logo-inner large-7"> <a href="{% url "main" %}"><img src="{% static "images/logo3.jpg" %}" alt=""/></a> </div>
+
+    </div>
+    <div class="row menu-row">
+      <div class="columns top-menu large-12 top-nav">
+        <nav>
+          <section>
+            <ul class="sf-menu">
+            	{% url 'current_url' as current_url %}
+              <li class=""><a href="{% url "main" %}">Главная</a></li>
+              <li><a href="{% url "about" %}">О нас</a></li>
+              <li{% if is_news == current_url %} class="menu-active"{% endif %}><a href="{% url "news" %}">Новости</a></li>
+              <li><a href="{% url "product" %}">Продукция</a>
+                <ul class="dropdown">
+                	{%prodact_menu%}
+                  
+                 
+                  
+                </ul></li>
+              
+              <li><a href="{% url "gear" %}">Оборудование</a></li>
+              <li><a href="{% url "form" %}">Контакты</a></li>
+            </ul>
+          </section>
+        </nav>
+      </div>
+    </div>
+    <div class="row small-top-menu">
+      <div class="columns large-12 plr0 top-nav">
+        <form name="dropdown" action="#">
+          <nav>
+            <section>
+              <select name="" id="target" accesskey="E" onChange="goToNewPage(document.dropdown.selected)">
+                <option value="{% url "main" %}">Главная</option>
+                <option value="{% url "about" %}">О нас</option>
+                <option value="{% url "news" %}">Новости</option>
+                <option value="{% url "product" %}">Продукция</option>
+                <option value="{% url "gear" %}">Оборудование</option>
+                <option value="{% url "form" %}">Контакты</option>
+                
+              </select>
+            </section>
+          </nav>
+        </form>
+      </div>
+    </div>
+  </div>
+  {% block main %}
+  
+  {% endblock %}
+    <div class="columns footer">
+    <div class="row">
+      <div class="columns large-12 footer-inner">
+        <div class="row">
+          <div class="columns large-1">
+            
+          </div>
+          <div class="columns large-11">
+            <form action="" method="POST">{% csrf_token %}
+              <div class="row">
+                <div class="columns large-4">
+                  <input type="email" value="" name="EMAIL" class="email" placeholder="email адрес" required>
+                </div>
+                <div class="columns large-4">
+                  <input type="text" value="" name="name" class="email" placeholder="имя" required>
+                </div>
+                <div class="columns large-4">
+                  
+
+
+
+<input type="submit" class="button" value='подписаться на рассылку'/>
+
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="columns footer-meta">
+    <div class="row">
+      <div class="columns large-12 footer-meta-inner">
+        <div class="row">
+          <div class="columns large-12"> <span class="email">info@ozna.su</span> <span class="divider">|</span> <span class="tel">220-380</span> <span class="divider">|</span> <span class="address">51Г, 22 Партсъезда, Омск</span> </div>
+        </div>
+        <div class="row">
+          <div class="columns large-12"> &copy; Все права защищены.  </div>
+        </div>
+        <div class="row">
+          <!-- <div class="columns large-12"> <a href="#" class="media facebook"></a><a href="#" class="media twitter"></a><a href="#" class="media reddit"></a><a href="#" class="media youtube"></a> </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a class="loader" href="#inline_content"></a></p>
+
+
+
+
+
+
+{% include 'js.html' %}
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter48874427 = new Ya.Metrika2({
+                    id:48874427,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks2");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/48874427" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

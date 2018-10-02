@@ -1,0 +1,215 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block main %}
+  <div class="columns large-12 content-row">
+    <div class="row title">
+      <div class="columns large-12 content-title-inner">
+        <div class="row">
+          <div class="columns large-12">
+            <h2 class="page-title">КСО</h2>
+            <h2 class="content-title">Камеры сборные одностороннего обслуживания.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+   <div class="row content about">
+      <div class="columns large-6 content-inner">
+        <div class="row  gallery-block">
+          <div class="columns small-12">
+            <div class="thumbnail-block">
+            	
+                <a class="thumbnail" href="{% static "images/kso3.jpg" %}"rel="box" title="КСО"><img src="{% static "images/kso3.jpg" %}" alt=""></a>
+            </div>
+           
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns large-12">
+            <div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <div class="row testimonial">
+          <div class="columns large-3"> <img src="images/mantest.jpg" alt="" class="test-img"> </div>
+          <p class="bktp_header">Типовые схемы КСО <p>
+          <div class="columns large-12">
+          	
+				<div class="thumbnail-block">
+              <ul class="small-block-grid-4 block-grid four-up">
+                <li><a class="colorbox" href="{% static "images/kso_shema3.png" %}" rel="box"><img src="{% static "images/kso_shema3.png" %}" alt=""></a></li>
+                <li><a class="thumbnail" href="{% static "images/kso_shema4.png" %}" rel="box"><img src="{% static "images/kso_shema4.png" %}" alt=""></a></li>
+                <li><a class="thumbnail" href="{% static "images/kso_shema5.png" %}" rel="box"><img src="{% static "images/kso_shema5.png" %}" alt=""></a></li>
+                <li><a class="thumbnail" href="{% static "images/kso_shema6.png" %}" rel="box"><img src="{% static "images/kso_shema6.png" %}" alt=""></a></li>
+                <li><a class="thumbnail" href="{% static "images/kso_shema1.png" %}" rel="box"><img src="{% static "images/kso_shema1.png" %}" alt=""></a></li>
+                <li><a class="thumbnail" href="{% static "images/kso_shema2.png" %}" rel="box"><img src="{% static "images/kso_shema2.png" %}" alt=""></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns large-6 content-inner">
+      	<div class="row">
+      	<p class="bktp_header">Назначение<p><br/><br/>
+      	</div>
+        			<div class="row">
+                       <div class="columns large-12">
+        <p> Камера КСО предназначена для работы в трехфазных высоковольтных сетях напряжением 6(10 кВ) и частотой 50-60 Гц </p>
+        <p><b>Выполняют функцию защиты, обеспечения котроля и обслуживания отходящих силовых линий.  </p>
+        <p><b>Модульные</b> - в зависимости от требований заказчика могут иметь различную компоновку и состоять из нескольких модулей. </p>
+        			</div>
+                      </div>
+        <div class="row">
+        <p class="bktp_header">Технические требования<p>
+         </div>
+       		<div class="row">
+       			<ul class="large-block-grid-2">
+              	<li>
+                  <b>Номинальное напряжение, кВа</b>
+                </li>
+              	<li>
+                  6;10
+                </li>
+                </ul>
+                <ul class="large-block-grid-2">
+              	<li>
+                <b>  Наибольшее рабочее напряжение, кВ</b>
+                </li>
+              	<li>
+					7,2; 12
+				</li>
+				
+                </ul>
+                <ul class="large-block-grid-2">
+              	<li>
+                 <b> Номинальный ток главных цепей, А  </b>
+                </li>
+              	<li>
+					400;630;1000
+				</li>
+				
+                </ul>
+                <ul class="large-block-grid-2">
+              	<li>
+				<b>	Номинальный ток сборных шин, А</b>
+				</li>
+              	<li>
+					400; 630; 1000
+				</li>
+				
+                </ul>
+                 </ul>
+                <ul class="large-block-grid-2">
+              	<li>
+				<b>	Ток электродинамической стойкости, кА		 </b>           	
+				</li>
+              	<li>
+					51
+				</li>
+				
+                </ul>
+                <ul class="large-block-grid-2">
+              	<li>
+				<b>	Ток термической стойкости, кА   		</b>
+				</li>
+              	<li>
+					20
+				</li>
+				
+                </ul>
+                <ul class="large-block-grid-2">
+              	<li>
+							<b>Сопротивление изоляции, МОм 				</b>
+				</li>
+              	<li>
+					20
+				</li>
+				
+                </ul>
+                <ul class="large-block-grid-2">
+              	<li>
+						<b>Напряжение цепей освещения внутри КСО, В 	</b>
+				</li>
+              	<li>
+					36
+				</li>
+				
+                </ul>
+                <ul class="large-block-grid-2">
+              	<li>
+					<b>Напряжение цепей освещения снаружи КСО, В</b>
+				</li>
+              	<li>
+					220
+				</li>
+				
+                </ul>
+                <ul class="large-block-grid-2">
+              	<li>
+						<b>Температура эксплуатации	</b>    
+				</li>
+              	<li>
+					-25 + 40
+				</li>
+				
+                </ul>
+                <ul class="large-block-grid-2">
+              	<li>
+					<b>Способ обслуживания	</b> 
+				</li>
+              	<li>
+					односторонний        
+				</li>
+				
+                </ul>
+                <ul class="large-block-grid-2">
+              	<li>
+					<b>Срок службы КСО	</b> 
+				</li>
+              	<li>
+					не менее 25 лет        
+				</li>
+				
+                </ul>
+            </div>
+      </div>
+      
+        <div class="row content about">
+        	
+      <div class="columns large-12 content-inner">
+        <div class="row  gallery-block">
+        		<div class="columns large-12 content-inner">
+      	<p class="bktp_header">Пример реализации КСО <p><br/><br/>
+      	</div>
+          <div class="columns small-12">
+            <div class="thumbnail-block">
+                <ul class="large-block-grid-3">
+              <li>
+                <div class="primer_ktp"><a href="{% static "images/kso-vvod.jpg" %}" rel="box"><img src="{% static "images/kso-vvod.jpg" %}" alt="" class="about-image"></a></div>
+                <h4 class="employer-name" > Вводная ячейка КСО</h4>
+                <p>Вводная ячейка КСО – состоит из алюминиевых шин,  выключателей нагрузки ВНА 10/630 с заземляющими ножами.</p>
+              </li>
+             <li>
+                <div class="primer_ktp"><a href="{% static "images/kso_shema.png" %}" rel="box"><img src="{% static "images/kso_shema.png" %}" alt="" class="about-image"></a></div>
+                <h4 class="employer-name" > Схема КСО</h4>
+                <p>1 - сборные шины; 2 - выключатель нагрузки ВНА; 3 - опорный изолятор; 4 - заземляющий нож ЗН; 5 - привод разъединителя; 6 - клеммник;</p>
+              </li>
+            
+            </ul>
+            
+            </div>
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns large-12">
+            <div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

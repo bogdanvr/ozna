@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block main %}
+  <div class="columns large-12 content-row">
+    <div class="row title">
+      <div class="columns large-12 content-title-inner">
+        <div class="row">
+          <div class="columns large-12">
+            <h2 class="page-title">Оборудование</h>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row content testimonials-page">
+      <div class="columns large-12  content-inner">
+        <div class="row testimonial">
+          <div class="columns large-5"> <img src="{% static "images/listogib.jpg" %}" alt="" class="test-img"> </div>
+          <div class="columns large-7">
+          	<p class="testimonial-credits2"><b>Листогибочный станок</b></p>
+            <p class="testimoial-text"> Листогибочный станок предназначен для формовки металла различных размеров и толщин применяемых в корпусах подстанций. </p>
+            
+          </div>
+        </div>
+        <div class="row testimonial">
+          <div class="columns large-5"> <img src="{% static "images/ugol.jpg" %}" alt="" class="test-img"> </div>
+          <div class="columns large-7">
+          	<p class="testimonial-credits2"><b>Угловысечной станок.</b></p>
+            <p class="testimoial-text">Угловысечной станок предназнечен для резки криволинейных профилей и листового металла. </p>
+            
+          </div>
+        </div>
+        <div class="row testimonial">
+          <div class="columns large-5"> <img src="{% static "images/plazma.jpg" %}" alt="" class="test-img"> </div>
+          <div class="columns large-7">
+          	<p class="testimonial-credits2"><b>Станок плазменной резки.</b></p>
+            <p class="testimoial-text"> Высокоточный ЧПУ станок для плазменной резки металла. </p>
+            
+          </div>
+        </div>
+        <div class="row testimonial">
+          <div class="columns large-5"> <img src="{% static "images/termoplast.jpg" %}" alt="" class="test-img"> </div>
+          <div class="columns large-7">
+          	<p class="testimonial-credits2"><b>Термопластавтомат.</b></p>
+            <p class="testimoial-text">Применяется для изготовления деталей из пластика методом литья под давлением.</p>
+            
+          </div>
+        </div>
+        <div class="row testimonial">
+          <div class="columns large-5"> <img src="{% static "images/kamera.jpg" %}" alt="" class="test-img"> </div>
+          <div class="columns large-7">
+          	<p class="testimonial-credits2"><b>Камера порошковой покраски.</b></p>
+            <p class="testimonial-text"></p>
+            
+          </div>
+        </div>
+        <div class="row testimonial">
+          <div class="columns large-5"> <img src="{% static "images/zink.jpg" %}" alt="" class="test-img"> </div>
+          <div class="columns large-7">
+          	<p class="testimonial-credits2"><b>Установка цинкования</b></p>
+            <p class="testimoial-text"> Установка цинкования работает по принципу термодиффузии - поверхностное насыщение металла оксидом цинка.</p>
+            
+          </div>
+        </div> 
+        <div class="row testimonial">
+          <div class="columns large-5"> <img src="{% static "images/probiv.jpg" %}" alt="" class="test-img"> </div>
+          <div class="columns large-7">
+          	<p class="testimonial-credits2"><b>Установка для пробива металла</b></p>
+            <p class="testimoial-text"> Применяется для перфорации металла разлиными диаметром. Отличается высокой производительностью, в сравнении с обычным сверлением.</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  {% endblock %}

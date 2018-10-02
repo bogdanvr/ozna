@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block main %}
+<div class="row">
+<div class="columns large-12">
+<h1 style="text-align:center">Ошибка 404. Страница не найдена.</h1>
+<p style="text-align:center">Извините, но такой страницы не существует, либо неправильно набран адрес.</p>
+<p style="text-align:center">Вы можете перейти<a href="{% url "main" %}"> на главную страницу</a>.</p>
+</div>
+</div>
+
+{% endblock %}

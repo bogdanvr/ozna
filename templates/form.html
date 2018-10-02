@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block main %}
+  <div class="columns large-12 content-row">
+    <div class="row title">
+      <div class="columns large-12 content-title-inner">
+        <div class="row">
+          <div class="columns large-12">
+            <h1 class="page-title">контакты</h1>
+            <h2>(3812) 220-380</h2>
+            <span class="email">info@ozna.su</span> <span class="divider">|</span> <span class="tel">220-380</span> <span class="divider">|</span> <span class="address">51Г, 22 Партсъезда, Омск</span> </div>
+        </div>
+      </div>
+    </div>
+    <div class="row content about">
+      <div class="columns large-12 content-inner">
+        <div class="row contact-form">
+          <div class="columns large-5">
+            <div class="contact-img"><img src="{% static "images/sklad.jpg" %}" alt=""/></div>
+          </div>
+          <div class="columns large-7">
+      <form method='POST' action="">{% csrf_token %}
+{{ form.as_p }}
+
+
+<input type="submit" class="button send" value='отправить'/>
+</form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns large-12">
+            <div id="map_canvas">
+              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aabf9a0635cbdc0e8bc97804b5f5b37d3f9fe8537488d7f998f27221765ebfc25&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  
+
+  {% endblock %}

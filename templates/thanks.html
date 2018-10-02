@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block main %}
+  <div class="columns large-12 content-row">
+    <div class="row title">
+      <div class="columns large-12 content-title-inner">
+        <div class="row">
+          <div class="columns large-12">
+            <h1 class="page-title">контакты</h1>
+            <h2>(3812) 220-380</h2>
+            <span class="email">info@ozna.su</span> <span class="divider">|</span> <span class="tel">220-380</span> <span class="divider">|</span> <span class="address">51Г, 22 Партсъезда, Омск</span> </div>
+        </div>
+      </div>
+    </div>
+    <div class="row content about">
+      <div class="columns large-12 content-inner">
+        <div class="row contact-form">
+          <div class="columns large-5">
+            <div class="contact-img"><img src="{% static "images/sklad.jpg" %}" alt=""/></div>
+          </div>
+          <div class="columns large-7">
+            <p style="color:red;">Спасибо за Ваше обращение. В ближайшее время мы свяжемся с Вами.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns large-12">
+            <div id="map_canvas"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <script src="http://maps.google.com/maps/api/js?key=AIzaSyDxy-DnMH50GOy8hXqgmEM6DdW01eXtP7Y&callback=initMap&sensor=true"></script>
+  <script src="{% static 'js/google-maps.js' %}"></script>
+  {% endblock %}

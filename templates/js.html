@@ -1,0 +1,85 @@
+{% load staticfiles %}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="{% static 'js/colorbox/jquery.colorbox-min.js' %}"></script>
+<script src="{% static 'js/slider/jquery.flexslider-min.js' %}"></script>
+<script src="{% static 'js/slider/jquery.flexslider.js' %}"></script>
+
+<script src="{% static 'js/foundation.min.js' %}"></script>
+<script src="{% static 'js/hoverIntent.js' %}"></script>
+
+<script src="{% static 'js/placeholder.min.js' %}"></script>
+<script src="{% static 'js/superfish.js' %}"></script>
+
+
+
+
+
+<script>
+Modernizr.load({
+    test: Modernizr.placeholder,
+    nope: 'js/placeholder.min.js'
+});
+function goToNewPage() {
+    if (document.getElementById('target').value) {
+        window.location.href = document.getElementById('target').value;
+    }
+}
+</script>
+
+
+
+
+<script>
+  /* $(document).ready(function(){
+alert('Ваша версия jQuery ' + jQuery.fn.jquery);
+}); */
+</script>
+
+<script>
+$(document).ready(function () {
+    $('ul.sf-menu').superfish({
+        animation: {
+            height: 'show'
+        },
+        delay: 400
+    });
+    $(function () {
+        $('input, textarea').placeholder();
+    });
+    $('.flexslider').flexslider();
+});
+</script>
+<script>
+jQuery("a.сolorbox").colorbox();
+</script>
+
+<script>
+	jQuery(document).ready(function(){
+		jQuery("a[rel='box']").colorbox({
+			maxWidth:983,
+			maxHeight:1390,
+          current:" {current} из {total}" 
+          
+		});
+	});
+</script>
+
+<script type="text/javascript">
+	$(window).load(function(){
+	  $('.flexslider-inner').flexslider({
+		animation: "fade",
+		slideshowSpeed: 2000
+		
+	
+	  });
+	});
+</script>
+<script type="text/javascript">
+
+window.onload = function() {
+     $('div').removeClass('sl').addClass('sl2');
+  };
+
+
+
+</script>

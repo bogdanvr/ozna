@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block main %}
+  <div class="columns large-12 content-row">
+    <div class="row title">
+      <div class="columns large-12 content-title-inner">
+        <div class="row">
+          <div class="columns large-12">
+            <h2 class="page-title">
+{{name_context.name}}</h2>
+            <h2 class="content-title">{{name_context.short_text|safe}}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+   <div class="row content about">
+      <div class="columns large-6 content-inner">
+        <div class="row  gallery-block">
+          <div class="columns small-12">
+            <div class="thumbnail-block">
+            	
+                <a class="thumbnail" href="{{name_context.image.url}}"rel="box" title="{{name_context.name}}"><img src="{{name_context.image.url}}" alt="{{name_context.name}}"></a>
+            </div>
+           
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns large-12">
+            <div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        {% if name_context.header3 %}
+        <div class="row testimonial">
+          <div class="columns large-3"> <img src="images/mantest.jpg" alt="" class="test-img"> </div>
+          <p class="bktp_header">{{name_context.header3}}<p>
+          <div class="columns large-12">
+          	
+			<div class="thumbnail-block">
+              <ul class="large-block-grid-4 ">
+              	{% for i in name_context.image3.all %}
+              		<li><a class="colorbox" href="{{i.image.url}}" rel="box"><img src="{{i.image.url}}" alt=""></a></li>
+              	{% endfor %}
+                
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+        {% endif %}
+          <!--========================================== dop opisanie ============================================-->   
+       {% if name_context.header3_1 %}
+        <div class="row testimonial">
+          <div class="columns large-3"> <img src="images/mantest.jpg" alt="" class="test-img"> </div>
+          <p class="bktp_header">{{name_context.header3_1}}<p>
+          <div class="columns large-12">
+          	
+				<div class="thumbnail-block small_sign">
+              <ul class="large-block-grid-3 block-grid four-up">
+              	{% for i in name_context.image3_1.all %}
+              		<li><a class="colorbox" href="{{i.image.url}}" rel="box"><img src="{{i.image.url}}" alt="">{{i.description |safe}}</a></li>
+              		
+              	{% endfor %}
+                
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+    	{% endif %}
+    	
+    	 {% if name_context.header3_2 %}
+        <div class="row testimonial">
+          <div class="columns large-3"> <img src="images/mantest.jpg" alt="" class="test-img"> </div>
+          <p class="bktp_header">{{name_context.header3_2}}<p>
+          <div class="columns large-12">
+          	
+				<div class="thumbnail-block">
+              <ul class="large-block-grid-3 block-grid four-up">
+              	{% for i in name_context.image3_2.all %}
+              		<li><a class="colorbox" href="{{i.image.url}}" rel="box"><img src="{{i.image.url}}" alt=""></a></li>
+              	{% endfor %}
+                
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+    	{% endif %}
+      </div>
+      <!--========================================== column right ============================================-->  
+      <div class="columns large-6 content-inner">
+      	<div class="row">
+      	<p class="bktp_header">{{name_context.header1}}<p><br/><br/>
+      	</div>
+        			<div class="row">
+                       <div class="columns large-12">
+        {{name_context.text1|safe}}
+        			</div>
+                      </div>
+        <div class="row">
+        <p class="bktp_header">{{name_context.header2}} <p>
+         </div>
+       		<div class="row">
+       			{% for i in name_context.table.all %}
+                <ul class="large-block-grid-2">
+              	<li>
+					<b>{{i.name}}	</b> 
+				</li>
+              	<li>
+					{{i.description}}       
+				</li>
+				
+                </ul>
+                {% endfor %}
+            </div>
+            
+      
+       
+    	
+	{% if name_context.oprosnik %}
+	<!--========================================== oprosnik ============================================-->   
+        <div class="row">
+        	
+        	<p class="bktp_header"><a href="{{name_context.oprosnik.url}}"><img src="{% static "images/load_39552.png" %} "width="50" height="auto">Скачать опросный лист</a></p>
+    	</div>
+    
+    	
+    {% endif %}
+    
+    <!--========================================== struktura ============================================-->  
+    {% if name_context.struktura %}
+    	<div class="row">
+    		<p class="bktp_header">{{name_context.header_struktura}}<p>
+        	<div class="columns small-12">
+        		<div class="thumbnail-block">
+            	
+                <a class="thumbnail" href="{{name_context.struktura.url}}"rel="box" title=""><img src="{{name_context.struktura.url}}" alt=""></a>
+            </div>
+        	</div>	
+    	</div>
+    	
+     
+      {% endif %}
+    <!--========================================== sertifikat ============================================-->  
+       {% if name_context.header_sert %}
+       <br/>
+        <div class="row ">
+          <div class="columns large-3"> <img src="images/mantest.jpg" alt="" class="test-img"> </div>
+          <div class="row">
+      	<p class="bktp_header">{{name_context.header_sert}}<p><br/>
+      	</div>
+          <div class="columns large-12">
+          	
+				<div class="thumbnail-block">
+					
+              <ul class="large-block-grid-2 block-grid four-up">
+              	{% for i in name_context.sertifikat.all %}
+              		<li><a class="colorbox" href="{{i.image.url}}" rel="box"><img src="{{i.image.url}}" alt="" width="100" height="auto"></a></li>
+              	{% endfor %}
+                
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+    	{% endif %}
+    	</div>
+    <!--========================================== end column right ============================================-->  
+    
+     <!--========================================== portfolio ============================================-->  
+        <div class="row content about">
+     <div class="columns large-12 content-inner">
+        <div class="row  gallery-block">
+        		<div class="columns large-12 content-inner">
+      	<p class="bktp_header">{{name_context.header4}}<p><br/><br/>
+      	</div>
+          <div class="columns small-12">
+            <div class="thumbnail-block">
+                <ul class="large-block-grid-3">
+                	
+                	
+               {% for i in name_context.image4.all %}
+            		<li>
+                			<div class="primer_ktp"><a href="{{i.image.url}}" rel="box"><img src="{{i.image.url}}" alt="" class="about-image"></a></div>
+                			<h4 class="employer-name" > {{i.name}}</h4>
+                			<p>{{i.description}}</p>
+            		</li>
+               {% endfor %}
+             
+            		
+            </ul>
+             
+            
+            
+            
+            </div>
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns large-12">
+            <div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

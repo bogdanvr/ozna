@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block main %}
+  <div class="columns large-12 content-row">
+    <div class="row title">
+      <div class="columns large-12 content-title-inner">
+        <div class="row">
+          <div class="columns large-12">
+            <h2 class="page-title">{{name_context.title}} </h2>
+            <h2 class="content-title">{{name_context.desc|safe}}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row content about">
+      <div class="columns large-12 content-inner">
+        <div class="row  gallery-block">
+          <div class="columns small-12">
+            <div class="thumbnail-block">
+               
+            </div>
+            <div class="thumbnail-block product">
+            	
+              <ul class="large-block-grid-4 block-grid four-up">
+              	{% for object in context_filter %}
+              		<li><a class="thumbnail" href="/product/{{object.alias}}" title="ЩО-70"><span>{{object.name}}</span><img src="{{object.image.url}}" alt=""></a></li>
+              	{% endfor %}
+
+                  
+                  
+                  
+                  
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns large-12">
+            <div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <div class="row testimonial">
+          <div class="columns large-3"> <img src="images/mantest.jpg" alt="" class="test-img"> </div>
+          <div class="columns large-12">
+				<div class="thumbnail-block">
+              <ul class="large-block-grid-6 block-grid four-up">
+              	
+                <li><a class="colorbox" href="{% static "images/sertifikat1.jpg" %}" rel="box"><img src="{% static "images/sertifikat1.jpg" %}" alt=""></a></li>
+                <li><a class="thumbnail" href="{% static "images/sertifikat2.jpg" %}" rel="box"><img src="{% static "images/sertifikat2.jpg" %}" alt=""></a></li>
+                <li><a class="thumbnail" href="{% static "images/sertifikat3.jpg" %}" rel="box"><img src="{% static "images/sertifikat3.jpg" %}" alt=""></a></li>
+                <li><a class="thumbnail" href="{% static "images/deklaraziya1.jpg" %}" rel="box"><img src="{% static "images/deklaraziya1.jpg" %}" alt=""></a></li>
+                <li><a class="thumbnail" href="{% static "images/deklaraziya2.jpg" %}" rel="box"><img src="{% static "images/deklaraziya2.jpg" %}" alt=""></a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}
