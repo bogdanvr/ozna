@@ -24,9 +24,9 @@ from news.views import NewsView
 from about.views import AboutView
 from product.views import ProductView
 from product.views import KtpView
-from product.views import BktpView, SvetView, DetailLampView, DetailLedLampView, productdetail, ktpview, IndexView
-from product.views import SipView
-from product.views import MetView
+from product.views import  productdetail, ktpview, IndexView
+
+
 from gear.views import GearView
 
 from contact.views import contact, rssview
@@ -40,15 +40,9 @@ urlpatterns = [
     url(r'^about/$', AboutView.as_view(), name="about"),
     url(r'^product/$', ProductView.as_view(), name="product"),
     url(r'^product/(?P<service_id>\d+)/$', ktpview, name="ktp"),
-    url(r'^product/armatura_sip/$', SipView.as_view(), name="sip"),
-    url(r'^product/metallokonstrukzii_lep/$', MetView.as_view(), name="met"),
     url(r'^gear/$', GearView.as_view(), name="gear"),
     url(r'^form/$', contact, name="form"),
     url(r'^thanks/$', ThanksView.as_view(), name="thanks"),
-    url(r'^product/ktp$', BktpView.as_view(), name="bktp"),
-    url(r'^product/svetilniki_i_lampi/$', SvetView.as_view(), name="svet"),
-    url(r'^product/lum_lampi_t8g13/$', DetailLampView.as_view(), name="lumlamp"),
-    url(r'^product/led_lampi_t8g13/$', DetailLedLampView.as_view(), name="ledlamp"),
     url(r'^product/(?P<alias>[^/]+)/$', productdetail, name = 'productdetail'),
     url(r'^rss/$', MainView, name ='rss'),
 	

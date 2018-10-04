@@ -31,17 +31,7 @@ def ktpview(request, service_id):
 	return render_to_response('ktp.html', args)	
 
 
-class SipView(TemplateView):
-	template_name = "sip.html"
-	
-class MetView(TemplateView):
-	template_name = "met.html"
-	
-class BktpView(TemplateView):
-	template_name = "bktp.html"
 
-class SvetView(TemplateView):
-	template_name = "svet.html"
 	
 
 class DetailLampView(TemplateView):

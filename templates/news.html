@@ -11,53 +11,19 @@
         </div>
       </div>
     </div>
+    {% for i in object_list %}
     <div class="row content testimonials-page">
       <div class="columns large-12  content-inner">
         <div class="row testimonial">
-          <div class="columns large-3"><a class="colorbox" href="{% static "images/iso.jpg" %}" rel="box"> <img src="{% static "images/iso.jpg" %}" alt="iso" class="test-img"> </a></div>
+          <div class="columns large-3"><a class="colorbox" href="{{ i.image.url }}" rel="box"> <img src="{{ i.image.url }}" alt="iso" class="test-img"> </a></div>
           <div class="columns large-9">
-            <p class="testimoial-text"> Омский Завод Низковольтной Арматуры (ОЗНА), входящий в группу компаний СИБКОМЭЛЕКТРО, в очередной раз успешно прошел процедуру сертификации. Она состоит из ряда этапов аудита на предмет соответствия системы менеджмента качества в организации международным и национальным нормам. Одним из этапов аудита является лабораторные испытания сертифицируемой продукции. В результате прохождения всех этапов аудита завод ОЗНА получил декларацию о соответствии и сертификат качества ISO9001:2015 на продукцию собственного производства:<br>
-
-• Изготовление комплектных трансформаторных подстанций.<br>
-• Изготовление электрической распределительной и регулирующей аппаратуры среднего и низкого класса напряжения.<br>
-• Изготовление линейной аппаратуры для воздушных линий электропередач.<br><br>
-
-Получение сертификата ISO 9001 является заключительным этапом процедуры внедрения менеджмента качества в организации.
-Таким образом, можно с уверенностью сказать, компания СИБКОМЭЛЕКТРО соответствует самому высокому уровню качества продукции и предоставляемых услуг.  </p>
-            <p class="testimonial-credits"><b>21.03.2018</b></p>
+          	<p class="testimoial-text"> <b> {{ i.name }}</b> </p>
+            <p class="testimoial-text">  {{ i.description|safe }} </p>
+            <p class="testimonial-credits"><b>{{ i.date|date:"j.m.Y" }}</b></p>
           </div>
-        </div>
-        <div class="row testimonial">
-          <div class="columns large-3"> <a class="colorbox" href="{% static "images/2bktp.jpg" %}" rel="box"><img src="{% static "images/2bktp.jpg" %}" alt="" class="test-img"> </a></div>
-          <div class="columns large-9">
-          	<p class="testimoial-text">Выпущена 40-я 2БКТП 1000/10/0.4 с вакуумными выключателями BB/TEL и TDM.
-
-Двухтрансформаторная подстанция блочного исполнения в цельнометаллическом корпусе на стороне ВН - 10 кВ, на стороне НН - 0,4 кВ.
-Функциональное предназначение для электроснабжения промышленных предприятий. Высоковольтная панель КСО 393 на вакуумных выключателях BB/TEL, низковольтная панель ЩУ-70 на автоматах марки TDM. </p>
-            <p class="testimonial-credits"><b>12.12.2017</b></p>
-          </div>
-        </div>
-        <div class="row testimonial">
-          <div class="columns large-3"><a class="colorbox" href="{% static "images/reklouz.jpg" %}" rel="box"> <img src="{% static "images/reklouz.jpg" %}" alt="" class="test-img"></a> </div>
-          <div class="columns large-9">
-            <p class="testimoial-text"> Роль основного элемента коммутации играет вакуумный выключатель, срабатывающий при превышении запрограммированных величин.
- Функционально основными элементами являются:<br>
-
-   1 - вакуумный выключатель <br>
-
-   2 - трансформатор тока<br>
-
-  3 - трансформатора напряжения <br>
-
-  4 -блока управления.<br>
-
- </p>
-            <p class="testimonial-credits"><b>17.09.2017</b></p>
-          </div>
-        </div>
-       
-      </div>
+        
     </div>
   </div>
- 
+  </div>
+	{% endfor %}
   {% endblock %}
